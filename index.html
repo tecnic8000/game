@@ -29,6 +29,7 @@
         .articles__items {margin: 0 auto; transition: all 0.3s; padding: 90px 3px 20px 3px;}
         .articles__item {width: 25rem;}
         .articles__item:not(:last-child){margin-bottom: 1.25rem;}
+        .welcome1{border-radius: 15px;}
         @media (max-width:430px){
             .articles__item{width:100%}
             .articles__items{width: auto !important;}
@@ -97,9 +98,19 @@
             <iframe src="https://drive.google.com/file/d/1WMVD1qmmZP-u00YVz7ssstn2We9em6Fe/preview" width="390" height="220" allow="autoplay"></iframe>
         </div>
     </div>
-    
+    <div class="welcome1">
+        <iframe src="https://player.vimeo.com/video/1021255981?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Motion Graphic showreel 2024"></iframe>
+        <iframe src="https://player.vimeo.com/video/334382651?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1080" height="1080" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Pict Clothing Apparel Launch"></iframe>
+        <iframe src="https://player.vimeo.com/video/387808558?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="DIRTYCOINS Store Launch"></iframe>
+    </div>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>   
     <script>
+        //--------WELCOME SCREEN
+        $(document).ready(function(){
+            $('header').hide()
+            $('.article__item').hide()
+        })
+        //--------FILTER
         function imagesInit() {
         const images = document.querySelectorAll('.article__image');
         if (images.length){
