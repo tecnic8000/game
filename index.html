@@ -15,7 +15,12 @@
         @font-face{font-family: "Modenine";src: url("Modenine-2OPd.ttf")}
         * {font-family: "Modenine";}
         a {text-decoration: none;}
-        body {background: linear-gradient(to bottom, #fdffdd, #000000);}
+        body {
+            background: black;
+            background-image: url('bg.webp');
+            background-repeat: repeat;
+            background-position: center;
+        }
         iframe {border-radius: 15px;}
         header {
             position: fixed;
@@ -33,7 +38,23 @@
         .articles__items {margin: 0 auto; transition: all 0.3s; padding: 90px 3px 20px 3px;}
         .articles__item {width: 25rem;}
         .articles__item:not(:last-child){margin-bottom: 1.25rem;}
-        .welcome1{border-radius: 15px;}
+        .welcome1{
+            width: 350px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: whitesmoke;
+        }
+        .welcome1 iframe{
+            padding: 5px;
+        }
         @media (max-width:430px){
             .articles__item{width:100%}
             .articles__items{width: auto !important;}
@@ -103,9 +124,20 @@
         </div>
     </div>
     <div class="welcome1">
+        <div style="font-size: 32px; background: black; color: white; width: 100%;">TRAN MINH HOANG</div>
+        <div style="padding: 10px;font-size: 25px;width: 90%;">
+            <a href="CV_TranMinhHoang_2024.pdf" target=”_blank” style="color: black;"><i class="bi bi-file-earmark-person-fill">CV</i></a>
+            <span style="float: right;">
+                <a href="https://www.behance.net/minhhoangtran7" target=”_blank” style="color: white; background: black; padding: 4px;border-radius: 5px;"><i class="bi bi-behance"></i></a>
+                <a href="mailto:tranhoangtd@gmail.com" style="color: black;""><i class="bi bi-envelope-at-fill"></i></a>
+                <a href="tel:+0903788216" style="color: black;"><i class="bi bi-telephone-fill"></i></a>
+            </span>
+            
+        </div>
         <iframe src="https://player.vimeo.com/video/1021255981?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="320" height="180" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Motion Graphic showreel 2024"></iframe>
-        <iframe src="https://player.vimeo.com/video/334382651?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="180" height="180" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Pict Clothing Apparel Launch"></iframe>
-        <iframe src="https://player.vimeo.com/video/387808558?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="320" height="180" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="DIRTYCOINS Store Launch"></iframe>
+        <iframe src="https://player.vimeo.com/video/1021255981?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="320" height="180" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Motion Graphic showreel 2024"></iframe>
+        
+
     </div>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>   
     <script>
