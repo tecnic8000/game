@@ -23,7 +23,10 @@
             .articles__item{width:100%}
             .articles__items{width: auto !important;}
         }
-
+        #head1{
+            display: flex;
+            justify-content: space-between;
+        }
         #showreel2{
             width: 350px;
             border-style: solid;
@@ -39,12 +42,11 @@
             transform: translate(-50%, -50%);
             background: whitesmoke;
             z-index: 9;
+            
         }
         #homescreen1{
             display: flex;
             flex-direction: column;
-            
-            align-items: left;
             padding: 0px;
             position: absolute;
             top: 50%;
@@ -76,7 +78,7 @@
     </style>
 </head>
 <body>
-    <div id="head1" style="background: linear-gradient(180deg, rgb(152, 152, 152) 20%, #ccccccbe 100%); width: 100%;padding: 5px;font-size: 25px;">TRAN MINH HOANG<span id="time1" style="float: right;"></span></div>
+    <div id="head1" style="background: linear-gradient(180deg, rgb(225, 225, 225), rgb(97, 97, 97)); width: 100%;padding: 5px;font-size: 23px;align-items: center;">TRAN MINH HOANG<span id="time1" style="float: right; font-size: 20px;"></span></div>
     <!-- HOME SCREEN -->
     <div id="homescreen1" style="color: yellow; background: black;">
         <i id="showreel1" class="bi bi-folder-fill"><span style="letter-spacing: 2px;">SHOWREEL</span></i>
@@ -87,8 +89,8 @@
 
 
     <!-- WINDOWS -->
-    <div id="showreel2" style="">
-        <div style="font-size: 25px; background: linear-gradient(180deg, rgba(216, 214, 255, 0) 0%, #585858be 100%); color: black; width: 100%;text-align:left;padding: 5px 3px;">SHOWREEL<span id="button1" style="float: right; font-size: 19px;letter-spacing:5px"><i class="bi bi-dash-circle-fill" ></i><i class="bi bi-stop-circle-fill" ></i><i class="bi bi-x-circle-fill" style="color: red;"></i></span></div>
+    <div id="showreel2" style="border-radius: 20px;">
+        <div style="font-size: 25px; background: linear-gradient(180deg, rgba(216, 214, 255, 1) 0%, #585858be 100%); color: black; width: 100%;text-align:left;padding: 5px 3px;">SHOWREEL<span id="button1" style="float: right; font-size: 19px;letter-spacing:5px"><i class="bi bi-dash-circle-fill" ></i><i class="bi bi-stop-circle-fill" ></i><i class="bi bi-x-circle-fill" style="color: red;"></i></span></div>
         
         <iframe src="https://player.vimeo.com/video/1023680830?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="320" height="180" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="3D showreel 2024"></iframe>
         <iframe src="https://player.vimeo.com/video/1021255981?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="320" height="180" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Motion Graphic showreel 2024"></iframe>
