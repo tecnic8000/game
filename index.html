@@ -76,6 +76,7 @@
     </style>
 </head>
 <body>
+    <div id="head1" style="background: linear-gradient(180deg, rgb(152, 152, 152) 20%, #ccccccbe 100%); width: 100%;padding: 5px;font-size: 25px;">TRAN MINH HOANG<span id="time1" style="float: right;"></span></div>
     <!-- HOME SCREEN -->
     <div id="homescreen1" style="color: yellow; background: black;">
         <i id="showreel1" class="bi bi-folder-fill"><span style="letter-spacing: 2px;">SHOWREEL</span></i>
@@ -126,6 +127,20 @@
             $('#button2').click(function(){
                 $('#sponsor2').toggle()
             })
+            //--- CLOCK
+            function updateClock() {
+                    const now = new Date();
+                    let hours = now.getHours();
+                    const minutes = String(now.getMinutes()).padStart(2, '0');
+                    const seconds = String(now.getSeconds()).padStart(2, '0');
+                    const ampm = hours >= 12 ? 'PM' : 'AM';
+                    //hours = hours % 12;
+                    //hours = hours ? hours : 12; // The hour '0' should be '12'
+                    const timeString = ` ${hours}:${minutes}:${seconds}`;
+                    document.getElementById('time1').textContent = timeString;
+                }
+                setInterval(updateClock, 1000); // Update clock every second
+                updateClock();
         })
     </script>
 </body>
