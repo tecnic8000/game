@@ -72,10 +72,21 @@
             background: whitesmoke;
             z-index: 9;
         }
-        #design1{
-
-        }
         #design2{
+            width: 350px;
+            border-style: solid;
+            border-color: white;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: whitesmoke;
+            z-index: 9;
+        }
+        #film2{
             width: 350px;
             border-style: solid;
             border-color: white;
@@ -122,7 +133,16 @@
         .link1 {
             padding: 8px;
             border-radius: 5px;
-            box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.587);
+            box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.587);
+        }
+        .window1{
+            font-size: 25px; 
+            background: linear-gradient(180deg, rgba(216, 214, 255, 1) 0%, #585858be 100%); 
+            color: black; 
+            width: 100%;
+            text-align:left;
+            padding: 5px 2px; 
+            border-radius: 10px 10px 0px 0px;
         }
     </style>
 </head>
@@ -133,6 +153,7 @@
     <div id="homescreen1" style="width: 300px; display: none;">
         <i id="showreel1" class="bi bi-folder-fill" style="color:rgb(67, 208, 255);font-size: 40px;display: flex;align-items: center;"><span class="homescreen2">SHOWREEL</span></i>
         <i id="design1" class="bi bi-folder-fill" style="color:rgb(67, 208, 255);font-size: 40px;display: flex;align-items: center;"><span class="homescreen2">DESIGN</span></i>
+        <i id="film1" class="bi bi-folder-fill" style="color:rgb(67, 208, 255);font-size: 40px;display: flex;align-items: center;"><span class="homescreen2">FILM</span></i>
         <i id="sponsor1" class="bi bi-folder-fill" style="color:rgb(67, 208, 255);font-size: 40px;display: flex;align-items: center;"><span class="homescreen2">SPONSOR ME</span></i>
         <a href="https://tecnic8000.github.io/2024/" target="_blank"><i id="tecnic1" class="bi bi-folder-symlink-fill" style="color:rgb(67, 208, 255);font-size: 40px;display: flex;align-items: center;"><span class="homescreen2">TECNIC 8000</span></i></a>
     </div>
@@ -141,20 +162,26 @@
 
     <!-- WINDOWS -->
     <div id="showreel2" style="border-radius: 10px; ">
-        <div style="font-size: 25px; background: linear-gradient(180deg, rgba(216, 214, 255, 1) 0%, #585858be 100%); color: black; width: 100%;text-align:left;padding: 5px 2px; border-radius: 10px 10px 0px 0px;">SHOWREEL<span id="button1" style="float: right; font-size: 19px;letter-spacing:5px"><i class="bi bi-dash-circle-fill" ></i><i class="bi bi-stop-circle-fill" ></i><i class="bi bi-x-circle-fill" style="color: red;"></i></span></div>
+        <div class="window1">SHOWREEL<span id="button1" style="float: right; font-size: 19px;letter-spacing:5px"><i class="bi bi-dash-circle-fill" ></i><i class="bi bi-stop-circle-fill" ></i><i class="bi bi-x-circle-fill" style="color: red;"></i></span></div>
         
         <iframe src="https://player.vimeo.com/video/1023680830?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="320" height="180" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="3D showreel 2024"></iframe>
         <iframe src="https://player.vimeo.com/video/1021255981?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="320" height="180" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Motion Graphic showreel 2024"></iframe>
         
     </div>
     <div id="design2" style="display: none;">
-        <div style="font-size: 25px; background: linear-gradient(180deg, rgba(216, 214, 255, 0) 0%, #585858be 100%); color: black;text-align:left;padding: 5px 3px;">DESIGN<span id="button3" style="float: right; font-size: 19px;letter-spacing:5px"><i class="bi bi-dash-circle-fill" ></i><i class="bi bi-stop-circle-fill" ></i><i class="bi bi-x-circle-fill" style="color: red;"></i></span></div>
+        <div class="window1">DESIGN<span id="button3" style="float: right; font-size: 19px;letter-spacing:5px"><i class="bi bi-dash-circle-fill" ></i><i class="bi bi-stop-circle-fill" ></i><i class="bi bi-x-circle-fill" style="color: red;"></i></span></div>
+        <div style="padding: 10px;width: 90%;font-size: 23px;">
+            WORKING ON IT ...
+        </div>
+    </div>
+    <div id="film2" style="display: none;">
+        <div class="window1">FILM<span id="button4" style="float: right; font-size: 19px;letter-spacing:5px"><i class="bi bi-dash-circle-fill" ></i><i class="bi bi-stop-circle-fill" ></i><i class="bi bi-x-circle-fill" style="color: red;"></i></span></div>
         <div style="padding: 10px;width: 90%;font-size: 23px;">
             WORKING ON IT ...
         </div>
     </div>
     <div id="sponsor2" style="display: none;">
-        <div style="font-size: 25px; background: linear-gradient(180deg, rgba(216, 214, 255, 0) 0%, #585858be 100%); color: black;text-align:left;padding: 5px 3px;">SPONSOR ME<span id="button2" style="float: right; font-size: 19px;letter-spacing:5px"><i class="bi bi-dash-circle-fill" ></i><i class="bi bi-stop-circle-fill" ></i><i class="bi bi-x-circle-fill" style="color: red;"></i></span></div>
+        <div class="window1">SPONSOR ME<span id="button2" style="float: right; font-size: 19px;letter-spacing:5px"><i class="bi bi-dash-circle-fill" ></i><i class="bi bi-stop-circle-fill" ></i><i class="bi bi-x-circle-fill" style="color: red;"></i></span></div>
         <div style="padding: 10px;width: 90%;font-size: 23px;">
             WORKING ON IT ...
         </div>
@@ -189,6 +216,10 @@
                 $('#homescreen1').toggle()
                 $('#design2').toggle()
             })
+            $('#film1').click(function(){
+                $('#homescreen1').toggle()
+                $('#film2').toggle()
+            })
             // display: none
             // WINDOWS
             $('#button1').click(function(){
@@ -202,6 +233,10 @@
             $('#button3').click(function(){
                 $('#homescreen1').toggle()
                 $('#design2').toggle()
+            })
+            $('#button4').click(function(){
+                $('#homescreen1').toggle()
+                $('#film2').toggle()
             })
             //--- CLOCK
             function updateClock() {
