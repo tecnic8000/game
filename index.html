@@ -118,7 +118,9 @@
             transform: translateX(-50%);
             z-index: 5;
             width: 350px;
-            height: 33px ;
+            height: 33px;
+            clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+            background: linear-gradient(180deg, rgba(225, 225, 225, 0.212), rgb(108, 108, 108));
         }
         .homescreen2{
             letter-spacing: 1px; 
@@ -149,7 +151,7 @@
     <!-- MENUBAR  -->
     <div id="head1" style="background: linear-gradient(180deg, rgb(225, 225, 225), rgb(108, 108, 108)); width: 100%;padding: 5px;font-size: 23px;align-items: center;display: flex;justify-content: space-between;">&nbsp;TRAN MINH HOANG<span id="time1" style="float: right; font-size: 20px;"></span></div>
     <!-- HOME SCREEN -->
-    <div id="homescreen1" style="width: 300px; display: none;">
+    <div id="homescreen1" style="width: 300px;">
         <i id="showreel1" class="bi bi-folder-fill" style="color:rgb(67, 208, 255);font-size: 40px;display: flex;align-items: center;"><span class="homescreen2">SHOWREEL</span></i>
         <i id="design1" class="bi bi-folder-fill" style="color:rgb(67, 208, 255);font-size: 40px;display: flex;align-items: center;"><span class="homescreen2">GRAPHIC</span></i>
         <i id="film1" class="bi bi-folder-fill" style="color:rgb(67, 208, 255);font-size: 40px;display: none;align-items: center;"><span class="homescreen2">FILM</span></i>
@@ -157,7 +159,7 @@
         <a href="https://tecnic8000.github.io/2024/" target="_blank"><i id="tecnic1" class="bi bi-folder-symlink-fill" style="color:rgb(67, 208, 255);font-size: 40px;display: flex;align-items: center;"><span class="homescreen2">TECNIC 8000</span></i></a>
     </div>
     <!-- WINDOWS -->
-    <div id="showreel2" style="">
+    <div id="showreel2" style="display:none">
         <div class="window1">&nbsp;SHOWREEL<span id="button1" style="float: right; font-size: 19px;letter-spacing:5px"><i class="bi bi-dash-circle-fill" ></i><i class="bi bi-stop-circle-fill" ></i><i class="bi bi-x-circle-fill" style="color: red;"></i></span></div>
         <iframe src="https://player.vimeo.com/video/1023680830?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="320" height="180" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="3D showreel 2024"></iframe>
         <iframe src="https://player.vimeo.com/video/1021255981?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="320" height="180" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Motion Graphic showreel 2024"></iframe>
@@ -183,18 +185,27 @@
     </div>
     
     <!-- FOOTER -->
-
     <div id="bar1" style="display: flex;justify-content: space-between;align-items:flex-end; padding: 12px;width: 300px ;font-size: 30px;">
         <a href="CV_TranMinhHoang_2024.pdf" target=”_blank” style="color: white; background: rgb(255, 111, 0); padding: 7px 15px 5px 7px;border-radius: 10px;box-shadow: 0px 0px 1px 1px white;"><i class="bi bi-file-earmark-person-fill">CV</i></a>
         <a href="https://www.behance.net/minhhoangtran7" target=”_blank” style="color: white; background: rgb(0, 94, 255);" class="link1"><i class="bi bi-behance"></i></a>
         <a href="mailto:tranhoangtd@gmail.com" style="color: white ;background:linear-gradient(0deg, rgb(0, 182, 214), rgb(0, 68, 255))" class="link1"><i class="bi bi-envelope-at-fill"></i></a>
         <a href="tel:+0903788216" style="color: white; background:linear-gradient(0deg, rgb(49, 105, 46), lime);" class="link1"><i class="bi bi-telephone-fill"></i></a>
     </div>
-    <div id="bar2" style="clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);background:  linear-gradient(180deg, rgba(225, 225, 225, 0.212), rgb(108, 108, 108));"></div>
+    <div id="bar2"></div>
     
     <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const link = urlParams.get('l');
+            switch (link){
+                case '1': $('#homescreen1').toggle();$('#showreel2').toggle();break;
+                case '2': $('#homescreen1').toggle();$('#design2').toggle();break;
+                case '3': $('#homescreen1').toggle();$('#sponsor2').toggle();break;
+            }
+
         document.body.style.overflow = 'hidden';
         $(document).ready(function(){
+
+
             // HOME SCREEN
             $('#showreel1').click(function(){
                 $('#homescreen1').toggle()
